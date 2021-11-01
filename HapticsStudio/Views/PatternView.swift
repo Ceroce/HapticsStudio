@@ -12,12 +12,22 @@ struct PatternView: View {
     @Binding var zoom: HapticsDocument.Zoom
     
     var body: some View {
-        TimeRulerView(length: $pattern.length, zoom: $zoom)
+        VStack {
+            ForEach($pattern.tracks) { track in
+                TrackView(track: track, zoom: $zoom)
+                    .frame(height: 100, alignment: .leading)
+            }
+            
+            TimeRulerView(length: $pattern.length, zoom: $zoom)
+                .frame(height: 40, alignment: .leading)
+            
+            Spacer()
+        }
     }
 }
 
 struct PatternView_Previews: PreviewProvider {
     static var previews: some View {
-        PatternView(pattern: .constant(Pattern(tracks: [])), zoom: .constant(.init(pointsBySecond: 5000)))
+        PatternView(pattern: .constant(Pattern.samplePattern()), zoom: .constant(.init(pointsBySecond: 5000)))
     }
 }

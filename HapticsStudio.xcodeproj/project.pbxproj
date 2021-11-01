@@ -20,6 +20,7 @@
 		DFD1E0EB273041FE0084731D /* TransientEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0EA273041FE0084731D /* TransientEvent.swift */; };
 		DFE3007F2730483A00E48170 /* TransientEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3007E2730483900E48170 /* TransientEventView.swift */; };
 		DFE3008127304AB900E48170 /* TimeRulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3008027304AB900E48170 /* TimeRulerView.swift */; };
+		DFE3008327305C2400E48170 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3008227305C2400E48170 /* Color+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		DFD1E0EA273041FE0084731D /* TransientEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransientEvent.swift; sourceTree = "<group>"; };
 		DFE3007E2730483900E48170 /* TransientEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransientEventView.swift; sourceTree = "<group>"; };
 		DFE3008027304AB900E48170 /* TimeRulerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRulerView.swift; sourceTree = "<group>"; };
+		DFE3008227305C2400E48170 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				DFD1E0E2273041970084731D /* TrackView.swift */,
 				DFE3008027304AB900E48170 /* TimeRulerView.swift */,
 				DFE3007E2730483900E48170 /* TransientEventView.swift */,
+				DFE3008227305C2400E48170 /* Color+Extensions.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				DFD1E0E3273041970084731D /* TrackView.swift in Sources */,
 				DFD1E0B627303CA70084731D /* HapticsDocument.swift in Sources */,
 				DFD1E0B827303CA70084731D /* DocumentView.swift in Sources */,
+				DFE3008327305C2400E48170 /* Color+Extensions.swift in Sources */,
 				DFD1E0E9273041F20084731D /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

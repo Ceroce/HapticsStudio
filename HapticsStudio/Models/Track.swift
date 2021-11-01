@@ -7,6 +7,8 @@
 
 import Foundation
 
-struct Track {
+struct Track: Identifiable {
+    let id = UUID()
+    
     var events: [TransientEvent]
 }
