@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		DFD1E0B427303CA70084731D /* HapticsStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0B327303CA70084731D /* HapticsStudioApp.swift */; };
-		DFD1E0B627303CA70084731D /* HapticsStudioDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0B527303CA70084731D /* HapticsStudioDocument.swift */; };
-		DFD1E0B827303CA70084731D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0B727303CA70084731D /* ContentView.swift */; };
+		DFD1E0B627303CA70084731D /* HapticsDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0B527303CA70084731D /* HapticsDocument.swift */; };
+		DFD1E0B827303CA70084731D /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0B727303CA70084731D /* DocumentView.swift */; };
 		DFD1E0BA27303CAA0084731D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD1E0B927303CAA0084731D /* Assets.xcassets */; };
 		DFD1E0BD27303CAA0084731D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD1E0BC27303CAA0084731D /* Preview Assets.xcassets */; };
 		DFD1E0C827303CAA0084731D /* HapticsStudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0C727303CAA0084731D /* HapticsStudioTests.swift */; };
@@ -18,6 +18,8 @@
 		DFD1E0E7273041D70084731D /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0E6273041D70084731D /* Pattern.swift */; };
 		DFD1E0E9273041F20084731D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0E8273041F20084731D /* Track.swift */; };
 		DFD1E0EB273041FE0084731D /* TransientEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0EA273041FE0084731D /* TransientEvent.swift */; };
+		DFE3007F2730483A00E48170 /* TransientEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3007E2730483900E48170 /* TransientEventView.swift */; };
+		DFE3008127304AB900E48170 /* TimeRulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3008027304AB900E48170 /* TimeRulerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,8 +35,8 @@
 /* Begin PBXFileReference section */
 		DFD1E0B027303CA70084731D /* HapticsStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HapticsStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD1E0B327303CA70084731D /* HapticsStudioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsStudioApp.swift; sourceTree = "<group>"; };
-		DFD1E0B527303CA70084731D /* HapticsStudioDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsStudioDocument.swift; sourceTree = "<group>"; };
-		DFD1E0B727303CA70084731D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		DFD1E0B527303CA70084731D /* HapticsDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsDocument.swift; sourceTree = "<group>"; };
+		DFD1E0B727303CA70084731D /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
 		DFD1E0B927303CAA0084731D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DFD1E0BC27303CAA0084731D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DFD1E0BE27303CAA0084731D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,6 +47,8 @@
 		DFD1E0E6273041D70084731D /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
 		DFD1E0E8273041F20084731D /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		DFD1E0EA273041FE0084731D /* TransientEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransientEvent.swift; sourceTree = "<group>"; };
+		DFE3007E2730483900E48170 /* TransientEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransientEventView.swift; sourceTree = "<group>"; };
+		DFE3008027304AB900E48170 /* TimeRulerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRulerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				DFD1E0B327303CA70084731D /* HapticsStudioApp.swift */,
-				DFD1E0B527303CA70084731D /* HapticsStudioDocument.swift */,
+				DFD1E0B527303CA70084731D /* HapticsDocument.swift */,
 				DFD1E0E5273041C10084731D /* Models */,
 				DFD1E0E4273041AE0084731D /* Views */,
 				DFD1E0B927303CAA0084731D /* Assets.xcassets */,
@@ -116,9 +120,11 @@
 		DFD1E0E4273041AE0084731D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DFD1E0B727303CA70084731D /* ContentView.swift */,
+				DFD1E0B727303CA70084731D /* DocumentView.swift */,
 				DFD1E0E0273041880084731D /* PatternView.swift */,
 				DFD1E0E2273041970084731D /* TrackView.swift */,
+				DFE3008027304AB900E48170 /* TimeRulerView.swift */,
+				DFE3007E2730483900E48170 /* TransientEventView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -233,13 +239,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFE3007F2730483A00E48170 /* TransientEventView.swift in Sources */,
 				DFD1E0E7273041D70084731D /* Pattern.swift in Sources */,
+				DFE3008127304AB900E48170 /* TimeRulerView.swift in Sources */,
 				DFD1E0EB273041FE0084731D /* TransientEvent.swift in Sources */,
 				DFD1E0B427303CA70084731D /* HapticsStudioApp.swift in Sources */,
 				DFD1E0E1273041880084731D /* PatternView.swift in Sources */,
 				DFD1E0E3273041970084731D /* TrackView.swift in Sources */,
-				DFD1E0B627303CA70084731D /* HapticsStudioDocument.swift in Sources */,
-				DFD1E0B827303CA70084731D /* ContentView.swift in Sources */,
+				DFD1E0B627303CA70084731D /* HapticsDocument.swift in Sources */,
+				DFD1E0B827303CA70084731D /* DocumentView.swift in Sources */,
 				DFD1E0E9273041F20084731D /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

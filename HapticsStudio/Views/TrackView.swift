@@ -8,13 +8,20 @@
 import SwiftUI
 
 struct TrackView: View {
+    @Binding var track: Track
+    @Binding var zoom: HapticsDocument.Zoom
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Rectangle()
+                .fill(Color("Track.background"))
+        }
     }
 }
 
 struct TrackView_Previews: PreviewProvider {
     static var previews: some View {
-        TrackView()
+        TrackView(track: .constant(Track(events: [])), zoom: .constant(.init(pointsBySecond: 1000)))
+            .previewLayout(.fixed(width: 1000, height: 100))
     }
 }

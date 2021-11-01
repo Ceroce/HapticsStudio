@@ -1,5 +1,5 @@
 //
-//  HapticsStudioDocument.swift
+//  HapticsDocument.swift
 //  HapticsStudio
 //
 //  Created by Renaud Pradenc on 01/11/2021.
@@ -14,11 +14,16 @@ extension UTType {
     }
 }
 
-struct HapticsStudioDocument: FileDocument {
+struct HapticsDocument: FileDocument {
     var pattern: Pattern
 
-    init(pattern: Pattern) {
-        self.pattern = pattern
+    struct Zoom {
+        var pointsBySecond: Float = 1000.0
+    }
+    var zoom: Zoom = .init()
+    
+    init() {
+        self.pattern = Pattern(tracks: [])
     }
 
     static var readableContentTypes: [UTType] { [.appleHaptics] }

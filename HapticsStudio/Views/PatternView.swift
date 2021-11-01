@@ -8,13 +8,16 @@
 import SwiftUI
 
 struct PatternView: View {
+    @Binding var pattern: Pattern
+    @Binding var zoom: HapticsDocument.Zoom
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        TimeRulerView(length: $pattern.length, zoom: $zoom)
     }
 }
 
 struct PatternView_Previews: PreviewProvider {
     static var previews: some View {
-        PatternView()
+        PatternView(pattern: .constant(Pattern(tracks: [])), zoom: .constant(.init(pointsBySecond: 5000)))
     }
 }

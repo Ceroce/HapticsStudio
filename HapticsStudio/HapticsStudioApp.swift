@@ -10,8 +10,8 @@ import SwiftUI
 @main
 struct HapticsStudioApp: App {
     var body: some Scene {
-        DocumentGroup(newDocument: HapticsStudioDocument()) { file in
-            ContentView(document: file.$document)
+        DocumentGroup(newDocument: HapticsDocument()) { file in
+            DocumentView(document: file.$document)
         }
     }
 }
