@@ -9,31 +9,37 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 extension UTType {
-    static var exampleText: UTType {
-        UTType(importedAs: "com.example.plain-text")
+    static var appleHaptics: UTType {
+        UTType(importedAs: "com.apple.ahap")
     }
 }
 
 struct HapticsStudioDocument: FileDocument {
-    var text: String
+    var pattern: Pattern
 
-    init(text: String = "Hello, world!") {
-        self.text = text
+    init(pattern: Pattern) {
+        self.pattern = pattern
     }
 
-    static var readableContentTypes: [UTType] { [.exampleText] }
+    static var readableContentTypes: [UTType] { [.appleHaptics] }
 
+#warning("Not implemented yet")
     init(configuration: ReadConfiguration) throws {
         guard let data = configuration.file.regularFileContents,
-              let string = String(data: data, encoding: .utf8)
+              let text = String(data: data, encoding: .utf8)
         else {
             throw CocoaError(.fileReadCorruptFile)
         }
-        text = string
+        
+        // HERE: parse the JSON and make a Pattern from it
+        pattern = Pattern(tracks: [])
     }
     
+#warning("Not implemented yet")
     func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
-        let data = text.data(using: .utf8)!
+        // HERE: turn the Pattern to JSON
+
+        let data = Data()
         return .init(regularFileWithContents: data)
     }
 }

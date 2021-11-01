@@ -13,6 +13,11 @@
 		DFD1E0BA27303CAA0084731D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD1E0B927303CAA0084731D /* Assets.xcassets */; };
 		DFD1E0BD27303CAA0084731D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DFD1E0BC27303CAA0084731D /* Preview Assets.xcassets */; };
 		DFD1E0C827303CAA0084731D /* HapticsStudioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0C727303CAA0084731D /* HapticsStudioTests.swift */; };
+		DFD1E0E1273041880084731D /* PatternView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0E0273041880084731D /* PatternView.swift */; };
+		DFD1E0E3273041970084731D /* TrackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0E2273041970084731D /* TrackView.swift */; };
+		DFD1E0E7273041D70084731D /* Pattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0E6273041D70084731D /* Pattern.swift */; };
+		DFD1E0E9273041F20084731D /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0E8273041F20084731D /* Track.swift */; };
+		DFD1E0EB273041FE0084731D /* TransientEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0EA273041FE0084731D /* TransientEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +40,11 @@
 		DFD1E0BE27303CAA0084731D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DFD1E0C327303CAA0084731D /* HapticsStudioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HapticsStudioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD1E0C727303CAA0084731D /* HapticsStudioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsStudioTests.swift; sourceTree = "<group>"; };
+		DFD1E0E0273041880084731D /* PatternView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternView.swift; sourceTree = "<group>"; };
+		DFD1E0E2273041970084731D /* TrackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackView.swift; sourceTree = "<group>"; };
+		DFD1E0E6273041D70084731D /* Pattern.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>"; };
+		DFD1E0E8273041F20084731D /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		DFD1E0EA273041FE0084731D /* TransientEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransientEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +88,8 @@
 			children = (
 				DFD1E0B327303CA70084731D /* HapticsStudioApp.swift */,
 				DFD1E0B527303CA70084731D /* HapticsStudioDocument.swift */,
-				DFD1E0B727303CA70084731D /* ContentView.swift */,
+				DFD1E0E5273041C10084731D /* Models */,
+				DFD1E0E4273041AE0084731D /* Views */,
 				DFD1E0B927303CAA0084731D /* Assets.xcassets */,
 				DFD1E0BE27303CAA0084731D /* Info.plist */,
 				DFD1E0BB27303CAA0084731D /* Preview Content */,
@@ -100,6 +111,26 @@
 				DFD1E0C727303CAA0084731D /* HapticsStudioTests.swift */,
 			);
 			path = HapticsStudioTests;
+			sourceTree = "<group>";
+		};
+		DFD1E0E4273041AE0084731D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DFD1E0B727303CA70084731D /* ContentView.swift */,
+				DFD1E0E0273041880084731D /* PatternView.swift */,
+				DFD1E0E2273041970084731D /* TrackView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DFD1E0E5273041C10084731D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DFD1E0E6273041D70084731D /* Pattern.swift */,
+				DFD1E0E8273041F20084731D /* Track.swift */,
+				DFD1E0EA273041FE0084731D /* TransientEvent.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,9 +233,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFD1E0E7273041D70084731D /* Pattern.swift in Sources */,
+				DFD1E0EB273041FE0084731D /* TransientEvent.swift in Sources */,
 				DFD1E0B427303CA70084731D /* HapticsStudioApp.swift in Sources */,
+				DFD1E0E1273041880084731D /* PatternView.swift in Sources */,
+				DFD1E0E3273041970084731D /* TrackView.swift in Sources */,
 				DFD1E0B627303CA70084731D /* HapticsStudioDocument.swift in Sources */,
 				DFD1E0B827303CA70084731D /* ContentView.swift in Sources */,
+				DFD1E0E9273041F20084731D /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +394,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
@@ -370,7 +407,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -389,6 +426,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
@@ -401,7 +439,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
