@@ -21,6 +21,7 @@
 		DFE3007F2730483A00E48170 /* TransientEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3007E2730483900E48170 /* TransientEventView.swift */; };
 		DFE3008127304AB900E48170 /* TimeRulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3008027304AB900E48170 /* TimeRulerView.swift */; };
 		DFE3008327305C2400E48170 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3008227305C2400E48170 /* Color+Extensions.swift */; };
+		DFE3008727308A8B00E48170 /* TrackGraduation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3008627308A8B00E48170 /* TrackGraduation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		DFE3007E2730483900E48170 /* TransientEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransientEventView.swift; sourceTree = "<group>"; };
 		DFE3008027304AB900E48170 /* TimeRulerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeRulerView.swift; sourceTree = "<group>"; };
 		DFE3008227305C2400E48170 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
+		DFE3008627308A8B00E48170 /* TrackGraduation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackGraduation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				DFD1E0B727303CA70084731D /* DocumentView.swift */,
 				DFD1E0E0273041880084731D /* PatternView.swift */,
 				DFD1E0E2273041970084731D /* TrackView.swift */,
+				DFE3008627308A8B00E48170 /* TrackGraduation.swift */,
 				DFE3008027304AB900E48170 /* TimeRulerView.swift */,
 				DFE3007E2730483900E48170 /* TransientEventView.swift */,
 				DFE3008227305C2400E48170 /* Color+Extensions.swift */,
@@ -245,6 +248,7 @@
 				DFE3007F2730483A00E48170 /* TransientEventView.swift in Sources */,
 				DFD1E0E7273041D70084731D /* Pattern.swift in Sources */,
 				DFE3008127304AB900E48170 /* TimeRulerView.swift in Sources */,
+				DFE3008727308A8B00E48170 /* TrackGraduation.swift in Sources */,
 				DFD1E0EB273041FE0084731D /* TransientEvent.swift in Sources */,
 				DFD1E0B427303CA70084731D /* HapticsStudioApp.swift in Sources */,
 				DFD1E0E1273041880084731D /* PatternView.swift in Sources */,

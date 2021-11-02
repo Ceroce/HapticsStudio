@@ -15,6 +15,12 @@ struct TrackView: View {
         ZStack {
             Rectangle()
                 .fill(Color("Track.background"))
+            Group {
+                TrackGraduation(heightRatio: 0.75).stroke(lineWidth: 0.5)
+                TrackGraduation(heightRatio: 0.50).stroke(lineWidth: 0.5)
+                TrackGraduation(heightRatio: 0.25).stroke(lineWidth: 0.5)
+            }
+            .foregroundColor(Color("Track.graduation"))
         }
     }
 }
