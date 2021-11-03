@@ -23,6 +23,7 @@
 		DFE3008327305C2400E48170 /* Color+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3008227305C2400E48170 /* Color+Extensions.swift */; };
 		DFE3008727308A8B00E48170 /* TrackGraduation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3008627308A8B00E48170 /* TrackGraduation.swift */; };
 		DFE3008D2731D09800E48170 /* CGColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE3008C2731D09800E48170 /* CGColor+Extensions.swift */; };
+		DFE300912732A36C00E48170 /* Logger+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE300902732A36C00E48170 /* Logger+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		DFE3008227305C2400E48170 /* Color+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extensions.swift"; sourceTree = "<group>"; };
 		DFE3008627308A8B00E48170 /* TrackGraduation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackGraduation.swift; sourceTree = "<group>"; };
 		DFE3008C2731D09800E48170 /* CGColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGColor+Extensions.swift"; sourceTree = "<group>"; };
+		DFE300902732A36C00E48170 /* Logger+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Logger+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +162,7 @@
 			children = (
 				DFD1E0B327303CA70084731D /* HapticsStudioApp.swift */,
 				DFD1E0B527303CA70084731D /* HapticsDocument.swift */,
+				DFE300902732A36C00E48170 /* Logger+Extensions.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				DFD1E0EB273041FE0084731D /* TransientEvent.swift in Sources */,
 				DFD1E0B427303CA70084731D /* HapticsStudioApp.swift in Sources */,
 				DFD1E0E1273041880084731D /* PatternView.swift in Sources */,
+				DFE300912732A36C00E48170 /* Logger+Extensions.swift in Sources */,
 				DFD1E0E3273041970084731D /* TrackView.swift in Sources */,
 				DFD1E0B627303CA70084731D /* HapticsDocument.swift in Sources */,
 				DFD1E0B827303CA70084731D /* DocumentView.swift in Sources */,
