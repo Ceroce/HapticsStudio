@@ -28,7 +28,7 @@ struct PatternView: View {
 
 struct PatternView_Previews: PreviewProvider {
     static var previews: some View {
-        PatternView(pattern: .constant(Pattern.samplePattern()), zoom: .constant(.init(pointsBySecond: 5000)))
+        PatternView(pattern: .constant(Pattern.samplePattern), zoom: .constant(.init(pointsBySecond: 5000)))
             .previewInterfaceOrientation(.landscapeRight)
         
     }

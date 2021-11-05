@@ -16,7 +16,8 @@ typealias HapticIntensity = Float
 /// Sharpness of a haptic event, in the 0..1 range.
 typealias HapticSharpness = Float
 
-struct TransientEvent {
+struct TransientEvent: Identifiable {
+    let id = UUID()
     var time: HapticTime
     var intensity: HapticIntensity
     var sharpness: HapticSharpness

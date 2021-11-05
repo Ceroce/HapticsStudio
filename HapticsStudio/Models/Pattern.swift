@@ -13,10 +13,10 @@ struct Pattern {
 }
 
 extension Pattern {
-    static func samplePattern() -> Pattern {
-        Pattern(tracks: [
-            Track(events: []),
+    static let samplePattern = Pattern(
+        tracks: [
+            Track.sampleTrack,
             Track(events: [])
-        ])
-    }
+        ]
+    )
 }
