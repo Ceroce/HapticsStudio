@@ -11,6 +11,10 @@ struct Track: Identifiable {
     let id = UUID()
     
     var events: [TransientEvent]
+    
+    var title: String {
+        "Beats"
+    }
 }
 
 extension Track {

@@ -12,8 +12,10 @@ struct PatternView: View {
     @Binding var zoom: HapticsDocument.Zoom
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             ForEach($pattern.tracks) { track in
+                TrackHeaderView(track: track)
+                    .frame(height: 20, alignment: .leading)
                 TrackView(track: track, zoom: $zoom)
                     .frame(height: 100, alignment: .leading)
             }
