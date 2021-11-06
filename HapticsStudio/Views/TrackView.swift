@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TrackView: View {
     @Binding var track: Track
-    @Binding var zoom: HapticsDocument.Zoom
+    @Binding var docEnv: HapticsDocument.Environment
     
     let eventWidth = CGFloat(20)
     
@@ -26,9 +26,9 @@ struct TrackView: View {
             
             GeometryReader() { geometry in
                 ForEach($track.events) { event in
-                    TransientEventView(event: event, zoom: $zoom)
+                    TransientEventView(event: event, docEnv: $docEnv)
                         .frame(width: eventWidth, alignment: .bottomLeading)
-                        .position(x: CGFloat((event.time).wrappedValue * zoom.pointsBySecond) + eventWidth/2, y: geometry.size.height/2.0)
+                        .position(x: CGFloat((event.time).wrappedValue * docEnv.zoom) + eventWidth/2, y: geometry.size.height/2.0)
                 }
             }
         }
@@ -37,7 +37,7 @@ struct TrackView: View {
 
 struct TrackView_Previews: PreviewProvider {
     static var previews: some View {
-        TrackView(track: .constant(Track.sampleTrack), zoom: .constant(.init(pointsBySecond: 1000)))
+        TrackView(track: .constant(Track.sampleTrack), docEnv: .constant(.init(zoom: 1000)))
             .previewLayout(.fixed(width: 1000, height: 100))
     }
 }

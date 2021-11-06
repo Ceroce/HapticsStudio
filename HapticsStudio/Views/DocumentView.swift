@@ -11,7 +11,7 @@ struct DocumentView: View {
     @Binding var document: HapticsDocument
 
     var body: some View {
-        PatternView(pattern: $document.pattern, zoom: $document.zoom)
+        PatternView(pattern: $document.pattern, docEnv: $document.environment)
     }
 }
 

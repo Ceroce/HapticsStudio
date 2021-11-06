@@ -9,13 +9,13 @@ import SwiftUI
 
 struct TimeRulerView: View {
     @Binding var length: HapticTime
-    @Binding var zoom: HapticsDocument.Zoom
+    @Binding var docEnv: HapticsDocument.Environment
     
     var body: some View {
         ZStack {
             Rectangle()
                 .fill(Color("TimeRuler.background"))
-                .frame(width: CGFloat(zoom.pointsBySecond*length), alignment: .leading)
+                .frame(width: CGFloat(docEnv.zoom*length), alignment: .leading)
             Text("0,1")
         }
     }
@@ -23,7 +23,7 @@ struct TimeRulerView: View {
 
 struct TimeRulerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimeRulerView(length: .constant(2.0), zoom: .constant(.init(pointsBySecond: 1000.0)))
+        TimeRulerView(length: .constant(2.0), docEnv: .constant(.init(zoom: 1000.0)))
             .previewLayout(.fixed(width: 2500, height: 50))
     }
 }

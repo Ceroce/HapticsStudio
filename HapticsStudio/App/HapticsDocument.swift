@@ -17,10 +17,12 @@ extension UTType {
 struct HapticsDocument: FileDocument {
     var pattern: Pattern
 
-    struct Zoom {
-        var pointsBySecond: Float = 1000.0
+    struct Environment {
+        typealias PointsBySecond = Float
+        
+        var zoom: PointsBySecond = 1000.0
     }
-    var zoom: Zoom = .init()
+    var environment: Environment = .init()
     
     init() {
         self.pattern = Pattern(tracks: [])

@@ -9,9 +9,10 @@ import SwiftUI
 
 struct PatternView: View {
     @Binding var pattern: Pattern
-    @Binding var zoom: HapticsDocument.Zoom
+    @Binding var docEnv: HapticsDocument.Environment
     
-    @State private var startingPointsBySecond: Float?
+    /// The zoom at the begining of the Magnification gesture
+    @State private var startingZoom: HapticsDocument.Environment.PointsBySecond?
     
     var body: some View {
         
@@ -20,11 +21,11 @@ struct PatternView: View {
                 ForEach($pattern.tracks) { track in
                     TrackHeaderView(track: track)
                         .frame(height: 20, alignment: .leading)
-                    TrackView(track: track, zoom: $zoom)
+                    TrackView(track: track, docEnv: $docEnv)
                         .frame(height: 100, alignment: .leading)
                 }
                 
-                TimeRulerView(length: $pattern.length, zoom: $zoom)
+                TimeRulerView(length: $pattern.length, docEnv: $docEnv)
                     .frame(height: 40, alignment: .leading)
                 
                 Spacer()
@@ -33,14 +34,14 @@ struct PatternView: View {
         .gesture(
             MagnificationGesture()
                 .onChanged { magnifyBy in
-                    if startingPointsBySecond == nil {
-                        startingPointsBySecond = zoom.pointsBySecond
+                    if startingZoom == nil {
+                        startingZoom = docEnv.zoom
                     }
-                    print("magnifyBy = \(magnifyBy)")
-                    zoom.pointsBySecond = startingPointsBySecond! * Float(magnifyBy)
+                    // magnifyBy is expressed as a ratio (0..1) of the size at the beginning of the gesture
+                    docEnv.zoom = startingZoom! * Float(magnifyBy)
                 }
                 .onEnded { magnifyBy in
-                    startingPointsBySecond = nil
+                    startingZoom = nil
                 }
         )
         
@@ -49,7 +50,7 @@ struct PatternView: View {
 
 struct PatternView_Previews: PreviewProvider {
     static var previews: some View {
-        PatternView(pattern: .constant(Pattern.samplePattern), zoom: .constant(.init(pointsBySecond: 5000)))
+        PatternView(pattern: .constant(Pattern.samplePattern), docEnv: .constant(.init(zoom: 5000)))
             .previewInterfaceOrientation(.landscapeRight)
         
     }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TransientEventView: View {
     @Binding var event: TransientEvent
-    @Binding var zoom: HapticsDocument.Zoom
+    @Binding var docEnv: HapticsDocument.Environment
     
     /// Not the actual length, but the length used to represent the event.
     let representationLength: HapticTime = 0.02
@@ -34,10 +34,10 @@ struct TransientEventView: View {
 
 struct TransientEventView_Previews: PreviewProvider {
     static var previews: some View {
-        TransientEventView(event: .constant(TransientEvent(time: 1.0, intensity: 0.25, sharpness: 0.2)), zoom: .constant(.init(pointsBySecond: 500)))
+        TransientEventView(event: .constant(TransientEvent(time: 1.0, intensity: 0.25, sharpness: 0.2)), docEnv: .constant(.init(zoom: 500)))
             .previewLayout(.fixed(width: 20, height: 100.0))
         
-        TransientEventView(event: .constant(TransientEvent(time: 1.0, intensity: 1.0, sharpness: 0.75)), zoom: .constant(.init(pointsBySecond: 500)))
+        TransientEventView(event: .constant(TransientEvent(time: 1.0, intensity: 1.0, sharpness: 0.75)), docEnv: .constant(.init(zoom: 500)))
             .previewLayout(.fixed(width: 20, height: 100.0))
     }
 }
