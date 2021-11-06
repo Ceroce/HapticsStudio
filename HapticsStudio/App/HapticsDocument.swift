@@ -37,7 +37,7 @@ struct HapticsDocument: FileDocument {
         }
         
         // HERE: parse the JSON and make a Pattern from it
-        pattern = Pattern(tracks: [])
+        pattern = Pattern.samplePattern
     }
     
 #warning("Not implemented yet")

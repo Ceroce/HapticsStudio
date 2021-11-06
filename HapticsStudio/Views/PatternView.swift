@@ -11,20 +11,39 @@ struct PatternView: View {
     @Binding var pattern: Pattern
     @Binding var zoom: HapticsDocument.Zoom
     
+    @State private var startingPointsBySecond: Float?
+    
     var body: some View {
-        VStack(spacing: 0) {
-            ForEach($pattern.tracks) { track in
-                TrackHeaderView(track: track)
-                    .frame(height: 20, alignment: .leading)
-                TrackView(track: track, zoom: $zoom)
-                    .frame(height: 100, alignment: .leading)
+        
+        ScrollView([.horizontal, .vertical]) {
+            VStack(spacing: 0) {
+                ForEach($pattern.tracks) { track in
+                    TrackHeaderView(track: track)
+                        .frame(height: 20, alignment: .leading)
+                    TrackView(track: track, zoom: $zoom)
+                        .frame(height: 100, alignment: .leading)
+                }
+                
+                TimeRulerView(length: $pattern.length, zoom: $zoom)
+                    .frame(height: 40, alignment: .leading)
+                
+                Spacer()
             }
-            
-            TimeRulerView(length: $pattern.length, zoom: $zoom)
-                .frame(height: 40, alignment: .leading)
-            
-            Spacer()
         }
+        .gesture(
+            MagnificationGesture()
+                .onChanged { magnifyBy in
+                    if startingPointsBySecond == nil {
+                        startingPointsBySecond = zoom.pointsBySecond
+                    }
+                    print("magnifyBy = \(magnifyBy)")
+                    zoom.pointsBySecond = startingPointsBySecond! * Float(magnifyBy)
+                }
+                .onEnded { magnifyBy in
+                    startingPointsBySecond = nil
+                }
+        )
+        
     }
 }
 
