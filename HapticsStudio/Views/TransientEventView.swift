@@ -19,30 +19,25 @@ struct TransientEventView: View {
             VStack(spacing: 0) {
                 Rectangle()
                     .fill(Color(red: 0, green: 0, blue: 0, opacity: 0.05))
-                Rectangle()
-                    .fill(color(for: event.sharpness))
-                    .frame(height: CGFloat(event.intensity) * geometry.size.height, alignment: .bottomLeading)
+                ZStack {
+                    Rectangle()
+                        .stroke(Color("TransientEvent"))
+                    Rectangle()
+                        .fill(Color("TransientEvent").opacity(CGFloat(event.sharpness)))
+                }
+                .frame(height: CGFloat(event.intensity) * geometry.size.height, alignment: .bottomLeading)
             }
             
         }
-    }
-    
-    private func color(for sharpness: HapticSharpness) -> Color {
-        guard let minColor = UIColor(named: "Event.minSharpness"),
-              let maxColor = UIColor(named: "Event.maxSharpness") else {
-                  return .black
-              }
-
-        return Color(mix(minColor.cgColor, maxColor.cgColor, ratio: CGFloat(sharpness)))
     }
 }
 
 struct TransientEventView_Previews: PreviewProvider {
     static var previews: some View {
-        TransientEventView(event: .constant(TransientEvent(time: 1.0, intensity: 0.25, sharpness: 0.0)), zoom: .constant(.init(pointsBySecond: 500)))
+        TransientEventView(event: .constant(TransientEvent(time: 1.0, intensity: 0.25, sharpness: 0.2)), zoom: .constant(.init(pointsBySecond: 500)))
             .previewLayout(.fixed(width: 20, height: 100.0))
         
-        TransientEventView(event: .constant(TransientEvent(time: 1.0, intensity: 1.0, sharpness: 0.5)), zoom: .constant(.init(pointsBySecond: 500)))
+        TransientEventView(event: .constant(TransientEvent(time: 1.0, intensity: 1.0, sharpness: 0.75)), zoom: .constant(.init(pointsBySecond: 500)))
             .previewLayout(.fixed(width: 20, height: 100.0))
     }
 }
