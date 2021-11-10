@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DF10553E273ADBB600CA051E /* SecondRulerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF10553D273ADBB600CA051E /* SecondRulerView.swift */; };
 		DFD1E0B427303CA70084731D /* HapticsStudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0B327303CA70084731D /* HapticsStudioApp.swift */; };
 		DFD1E0B627303CA70084731D /* HapticsDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0B527303CA70084731D /* HapticsDocument.swift */; };
 		DFD1E0B827303CA70084731D /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1E0B727303CA70084731D /* DocumentView.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		DF10553D273ADBB600CA051E /* SecondRulerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondRulerView.swift; sourceTree = "<group>"; };
 		DFD1E0B027303CA70084731D /* HapticsStudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HapticsStudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DFD1E0B327303CA70084731D /* HapticsStudioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsStudioApp.swift; sourceTree = "<group>"; };
 		DFD1E0B527303CA70084731D /* HapticsDocument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticsDocument.swift; sourceTree = "<group>"; };
@@ -136,6 +138,7 @@
 				DFE300952736885200E48170 /* TrackHeaderView.swift */,
 				DFE3008627308A8B00E48170 /* TrackGraduation.swift */,
 				DFE3008027304AB900E48170 /* TimeRulerView.swift */,
+				DF10553D273ADBB600CA051E /* SecondRulerView.swift */,
 				DFE3007E2730483900E48170 /* TransientEventView.swift */,
 			);
 			path = Views;
@@ -271,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DFE3007F2730483A00E48170 /* TransientEventView.swift in Sources */,
+				DF10553E273ADBB600CA051E /* SecondRulerView.swift in Sources */,
 				DFD1E0E7273041D70084731D /* Pattern.swift in Sources */,
 				DFE3008127304AB900E48170 /* TimeRulerView.swift in Sources */,
 				DFE3008727308A8B00E48170 /* TrackGraduation.swift in Sources */,
